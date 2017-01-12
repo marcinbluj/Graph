@@ -1,11 +1,9 @@
 package pl.mavenProject;
 
 
-
-import org.testng.annotations.Test;
-
 import java.util.ArrayList;
 import java.util.List;
+import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
@@ -87,7 +85,7 @@ public class PointTest {
         assertEquals(Point.pointsList.get(1), point3);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void constructor_isCorrectForOutOfRangeValues() {
 
         // given
@@ -97,7 +95,7 @@ public class PointTest {
         Point point1 = new Point(201,1);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void constructor_isCorrectForNegativeValues() {
 
         // given
